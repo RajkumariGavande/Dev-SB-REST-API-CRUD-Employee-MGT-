@@ -1,6 +1,7 @@
 package com.cjc.service;
 
 import java.util.List;
+import java.util.Map;
 
 import com.cjc.model.Employee;
 
@@ -19,6 +20,12 @@ public interface EmployeeService {
 	Employee editEmployee(int id, Employee employee);
 
 	List<Employee> getEmployeesBypagination(int pageNo, int pageSize);
+
+	List<Employee> getEmployeeSortedByPrice(String direction);
+
+	List<Employee> getEmployeesByName(String name);
+
+	List<Employee> getEmployeeByFilter(Map<String, String> filters);
 	
 
 }

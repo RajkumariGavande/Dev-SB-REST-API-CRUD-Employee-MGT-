@@ -1,50 +1,57 @@
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (1, 'Alex Smith', 'Software Engineer', 57432.50);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (2, 'Jordan Johnson', 'Senior Engineer', 120345.75);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (3, 'Taylor Brown', 'QA Engineer', 65200.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (4, 'Morgan Taylor', 'DevOps Engineer', 98000.25);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (5, 'Casey Anderson', 'Product Manager', 110500.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (6, 'Riley Thomas', 'Project Manager', 105750.40);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (7, 'Sam Jackson', 'Business Analyst', 67000.10);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (8, 'Jamie White', 'Technical Lead', 135250.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (9, 'Avery Harris', 'Architect', 149900.95);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (10, 'Cameron Martin', 'Support Engineer', 48000.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (11, 'Drew Thompson', 'Software Engineer', 65500.55);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (12, 'Quinn Garcia', 'Senior Engineer', 142300.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (13, 'Reese Martinez', 'QA Engineer', 59000.20);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (14, 'Rowan Robinson', 'DevOps Engineer', 89000.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (15, 'Skyler Clark', 'Product Manager', 125000.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (16, 'Parker Rodriguez', 'Project Manager', 98050.75);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (17, 'Blake Lewis', 'Business Analyst', 72000.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (18, 'Hayden Lee', 'Technical Lead', 131000.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (19, 'Kendall Walker', 'Architect', 155500.50);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (20, 'Logan Hall', 'Support Engineer', 45500.25);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (21, 'Alex Johnson', 'Software Engineer', 61000.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (22, 'Jordan Brown', 'Senior Engineer', 118500.45);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (23, 'Taylor Anderson', 'QA Engineer', 63500.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (24, 'Morgan Thomas', 'DevOps Engineer', 94000.80);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (25, 'Casey Jackson', 'Product Manager', 112200.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (26, 'Riley White', 'Project Manager', 101300.30);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (27, 'Sam Harris', 'Business Analyst', 68900.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (28, 'Jamie Martin', 'Technical Lead', 127450.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (29, 'Avery Thompson', 'Architect', 147200.20);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (30, 'Cameron Garcia', 'Support Engineer', 49800.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (31, 'Drew Martinez', 'Software Engineer', 60500.75);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (32, 'Quinn Robinson', 'Senior Engineer', 139900.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (33, 'Reese Clark', 'QA Engineer', 57120.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (34, 'Rowan Rodriguez', 'DevOps Engineer', 86000.60);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (35, 'Skyler Lewis', 'Product Manager', 120000.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (36, 'Parker Lee', 'Project Manager', 99000.99);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (37, 'Blake Walker', 'Business Analyst', 70350.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (38, 'Hayden Hall', 'Technical Lead', 133250.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (39, 'Kendall Smith', 'Architect', 151400.45);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (40, 'Logan Johnson', 'Support Engineer', 47250.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (41, 'Alex Brown', 'Software Engineer', 64000.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (42, 'Jordan Taylor', 'Senior Engineer', 121800.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (43, 'Taylor Anderson', 'QA Engineer', 62350.30);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (44, 'Morgan Martinez', 'DevOps Engineer', 95500.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (45, 'Casey Robinson', 'Product Manager', 116700.75);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (46, 'Riley Clark', 'Project Manager', 100450.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (47, 'Sam Rodriguez', 'Business Analyst', 68220.80);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (48, 'Jamie Lewis', 'Technical Lead', 129900.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (49, 'Avery Lee', 'Architect', 145600.00);
-INSERT INTO employee_dtls (employee_id, employee_name, employee_designation, employee_salary) VALUES (50, 'Cameron Walker', 'Support Engineer', 51200.25);
+INSERT INTO employee_dtls (
+  employee_id,
+  employee_name,
+  employee_salary,
+  employee_dept,
+  employee_designation
+) VALUES
+(101, 'Amit Sharma', 55000, 'HR', 'HR Executive'),
+(102, 'Neha Verma', 72000, 'Finance', 'Financial Analyst'),
+(103, 'Rahul Mehta', 68000, 'IT', 'Software Engineer'),
+(104, 'Priya Singh', 60000, 'Marketing', 'Marketing Executive'),
+(105, 'Suresh Patil', 80000, 'Operations', 'Operations Manager'),
+(106, 'Kavita Desai', 65000, 'IT', 'System Analyst'),
+(107, 'Rohit Kulkarni', 70000, 'Finance', 'Accounts Manager'),
+(108, 'Anjali Rao', 58000, 'HR', 'HR Coordinator'),
+(109, 'Vikram Joshi', 75000, 'IT', 'Senior Developer'),
+(110, 'Pooja Nair', 62000, 'Marketing', 'Content Strategist'),
+(111, 'Manish Gupta', 82000, 'Operations', 'Process Lead'),
+(112, 'Sneha Iyer', 67000, 'Finance', 'Budget Analyst'),
+(113, 'Arjun Malhotra', 90000, 'IT', 'Tech Lead'),
+(114, 'Ritu Kapoor', 54000, 'HR', 'Recruitment Officer'),
+(115, 'Nitin Bansal', 61000, 'Marketing', 'SEO Specialist'),
+(116, 'Deepak Yadav', 73000, 'Operations', 'Logistics Manager'),
+(117, 'Shweta Mishra', 66000, 'Finance', 'Payroll Specialist'),
+(118, 'Kunal Jain', 78000, 'IT', 'Backend Developer'),
+(119, 'Meera Kulkarni', 56000, 'HR', 'HR Assistant'),
+(120, 'Ajay Choudhary', 69000, 'Marketing', 'Brand Manager'),
+(121, 'Sunita Reddy', 64000, 'Finance', 'Cost Accountant'),
+(122, 'Harsh Vardhan', 85000, 'IT', 'Cloud Engineer'),
+(123, 'Isha Saxena', 59000, 'HR', 'Training Executive'),
+(124, 'Rakesh Sinha', 72000, 'Operations', 'Operations Supervisor'),
+(125, 'Divya Bhatt', 61000, 'Marketing', 'Social Media Manager'),
+(126, 'Mohit Aggarwal', 77000, 'Finance', 'Investment Analyst'),
+(127, 'Pallavi Gokhale', 68000, 'IT', 'QA Engineer'),
+(128, 'Sanjay More', 53000, 'HR', 'HR Administrator'),
+(129, 'Aarti Khatri', 65000, 'Marketing', 'Campaign Manager'),
+(130, 'Vivek Anand', 81000, 'Operations', 'Supply Chain Manager'),
+(131, 'Nupur Agarwal', 70000, 'Finance', 'Finance Manager'),
+(132, 'Prakash Shetty', 88000, 'IT', 'DevOps Engineer'),
+(133, 'Tanvi Joshi', 56000, 'HR', 'Employee Relations Officer'),
+(134, 'Ashish Tiwari', 74000, 'Marketing', 'Growth Manager'),
+(135, 'Rekha Pillai', 69000, 'Finance', 'Audit Executive'),
+(136, 'Siddharth Roy', 92000, 'IT', 'Engineering Manager'),
+(137, 'Komal Arora', 60000, 'HR', 'Compensation Analyst'),
+(138, 'Yogesh Pawar', 76000, 'Operations', 'Warehouse Manager'),
+(139, 'Bhavna Shah', 63000, 'Marketing', 'Market Research Analyst'),
+(140, 'Ankit Verma', 71000, 'Finance', 'Risk Analyst'),
+(141, 'Farhan Khan', 86000, 'IT', 'Full Stack Developer'),
+(142, 'Priti Salgaonkar', 55000, 'HR', 'HR Officer'),
+(143, 'Kishore Naidu', 78000, 'Operations', 'Plant Manager'),
+(144, 'Rashmi Kuldeep', 64000, 'Marketing', 'PR Executive'),
+(145, 'Alok Srivastava', 83000, 'Finance', 'Senior Finance Manager'),
+(146, 'Neelam Chavan', 59000, 'HR', 'HR Analyst'),
+(147, 'Varun Saxena', 90000, 'IT', 'Solution Architect'),
+(148, 'Seema Pawar', 62000, 'Marketing', 'Digital Marketing Executive'),
+(149, 'Rajesh Iyer', 87000, 'Operations', 'Operations Head'),
+(150, 'Pankaj Tripathi', 75000, 'Finance', 'Treasury Manager');

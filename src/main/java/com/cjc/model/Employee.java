@@ -9,6 +9,7 @@ import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import org.hibernate.annotations.DynamicUpdate;
+
 @XmlRootElement
 @DynamicUpdate
 @Entity
@@ -20,21 +21,24 @@ public class Employee {
 	private int id;
 	@Column(name = "EMPLOYEE_NAME")
 	private String name;
+	@Column(name = "EMPLOYEE_SALARY")
+	private Double salary;
+	@Column(name = "EMPLOYEE_DEPT")
+	private String dept;
 	@Column(name = "EMPLOYEE_DESIGNATION")
 	private String designation;
-	@Column(name = "EMPLOYEE_SALARY")
-	private double salary;
-
+	
 	public Employee() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Employee(int id, String name, String designation, double salary) {
+	public Employee(int id, String name, String designation, Double salary, String dept) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.designation = designation;
 		this.salary = salary;
+		this.dept = dept;
 	}
 
 	public int getId() {
@@ -61,17 +65,26 @@ public class Employee {
 		this.designation = designation;
 	}
 
-	public double getSalary() {
+	public Double getSalary() {
 		return salary;
 	}
 
-	public void setSalary(double salary) {
+	public void setSalary(Double salary) {
 		this.salary = salary;
+	}
+
+	public String getDept() {
+		return dept;
+	}
+
+	public void setDept(String dept) {
+		this.dept = dept;
 	}
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", designation=" + designation + ", salary=" + salary + "]";
+		return "Employee [id=" + id + ", name=" + name + ", designation=" + designation + ", salary=" + salary
+				+ ", dept=" + dept + "]";
 	}
 
 }
