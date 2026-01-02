@@ -23,30 +23,37 @@ import com.cjc.model.Employees;
 import com.cjc.service.EmployeeService;
 import com.fasterxml.jackson.databind.ser.std.StdKeySerializers.Default;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 @RestController
 @RequestMapping("/api")
+@Tag(name = "Employee Controller",
+description = "APIs for Employee CRUD, Pagination, Sorting, Searching and Filtering")
 public class EmployeeController {
 
-	// @Autowired
-	// private EmployeeService employeeService;
+	//@Autowired
+	//private EmployeeService employeeService;
 
-	// inject secondary dependency using constructor no need of @Autowired
+	//inject secondary dependency using constructor no need of @Autowired
 	private EmployeeService employeeService;
 
 	public EmployeeController(EmployeeService employeeService) {
 		this.employeeService = employeeService;
 	}
 
-	// to insert data into database
-	@PostMapping(value = "/addEmployee", produces = { "application/xml", "application/json" }, consumes = {
-			"application/xml", "application/json	" })
+	//to insert data into database
+	@Operation(summary = "Add new employee")
+	@PostMapping(value = "/addEmployee", produces = { "application/xml", "application/json" },
+			consumes = {"application/xml", "application/json	" })
 	public Employee addEmployee(@RequestBody Employee employee) {
 		System.out.println("In Controller Layer:" + employee);
 		Employee dbEmployee = employeeService.saveAll(employee);
 		return dbEmployee;
 	}
 
-	// to get single record from db using id
+	//to get single record from db using id
+	@Operation(summary = "Get employee by ID")
 	@GetMapping(value = "/getEmployee/{id}", produces = { "application/xml" })
 	public Employee getEmployee(@PathVariable int id) {
 		System.out.println("Fetching data for Employee Id:" + id);
@@ -55,14 +62,19 @@ public class EmployeeController {
 	}
 
 	// to get all records from db
-	@GetMapping(value = "/getEmployees")
+	 @Operation(summary = "Get all employees")
+	@GetMapping(value = "/getEmployees",produces = {"application/xml","application/json"})
 	public List<Employee> getAllEmployee() {
 		List<Employee> empList = employeeService.getAllEmployees();
 		return empList;
 	}
 
-	// to fetch all record in xml format
-	@GetMapping("/getEmployees-xml")
+	//to fetch all record in xml format
+	 @Operation(
+	            summary = "Get All Employees (XML Wrapper)",
+	            description = "Fetches all employees wrapped inside Employees object (XML friendly)"
+	    )
+	@GetMapping(value="/getEmployees-xml",produces = {"application/xml","application/json"})
 	public Employees getAllEmployeesXml() {
 		List<Employee> empList = employeeService.getAllEmployees();
 		Employees employees = new Employees();
@@ -70,14 +82,16 @@ public class EmployeeController {
 		return employees;
 	}
 
-	// to delete record from db using id
+	//to delete record from db using id
+    @Operation(summary = "Delete employee by ID")
 	@DeleteMapping("/deleteEmployee/{id}")
 	public String deleteEmployee(@PathVariable int id) {
 		String msg = employeeService.deleteEmployeeByID(id);
 		return msg;
 	}
 
-	// to update all record using id
+	//to update all record using id
+	 @Operation(summary = "Update employee")
 	@PutMapping("/updateEmployee/{id}")
 	public Employee updateEmployee(@PathVariable int id, @RequestBody Employee employee) {
 		Employee dbEmployee = employeeService.updateEmployee(id, employee);
@@ -85,14 +99,18 @@ public class EmployeeController {
 
 	}
 
-	// to update partial record
-	@PatchMapping("/editEmployee/{id}")
+	//to update partial record
+	 @Operation(
+	            summary = "Edit Employee",
+	            description = "Updates partial employee details using employee ID"
+	    )
+	@PatchMapping(value="/editEmployee/{id}")
 	public Employee editEmployee(@PathVariable int id, @RequestBody Employee employee) {
 		Employee editedEmployee = employeeService.editEmployee(id, employee);
 		return editedEmployee;
 	}
 
-	// pagination manually
+	//pagination manually
 //	@GetMapping("/employees/page/{pageNo}/size/{pageSize}")
 //	public List<Employee> getEmplpoyeesByPagination(@PathVariable int pageNo,@PathVariable int pageSize){
 //		List<Employee> empList=employeeService.getEmployeesBypagination(pageNo,pageSize);
@@ -101,7 +119,11 @@ public class EmployeeController {
 //	}
 
 	// pagination for default page and size if we don't specify in url
-	@GetMapping("/getEmployees/page")
+	 @Operation(
+	            summary = "Get Employees with Pagination",
+	            description = "Fetch employees using pagination with page number and page size"
+	    )
+	@GetMapping(value = "/getEmployees/page",produces = {"application/xml","application/json"})
 	public List<Employee> getEmplpoyeesByPagination(@RequestParam(defaultValue = "0") int pageNo,
 			@RequestParam(defaultValue = "5") int pageSize) {
 		List<Employee> empList = employeeService.getEmployeesBypagination(pageNo, pageSize);
@@ -109,22 +131,34 @@ public class EmployeeController {
 		return empList;
 	}
 
-	// sorting desc or asc
-	@GetMapping(value = "/getEmployees/sortByPrice")
+	//sorting desc or asc
+	 @Operation(
+	            summary = "Sort Employees by Salary",
+	            description = "Sort employees by salary in ascending or descending order"
+	    )
+	@GetMapping(value = "/getEmployees/sortByPrice",produces = {"application/xml","application/json"})
 	public List<Employee> getEmployeesSortedByPrice(@RequestParam(defaultValue = "asc") String direction) {
 
 		return employeeService.getEmployeeSortedByPrice(direction);
 
 	}
 
-	// searching by name
+	//searching by name
+	 @Operation(
+	            summary = "Search Employees by Name",
+	            description = "Fetch employees matching the given name"
+	    )
 	@GetMapping("/getEmployees/searchByName/{name}")
 	public List<Employee> getEmployeeByName(@PathVariable String name) {
 		return employeeService.getEmployeesByName(name);
 
 	}
 
-	// filtering accrording to price,category
+	//filtering accrording to price,category
+	  @Operation(
+	            summary = "Filter Employees",
+	            description = "Filter employees using department and salary range"
+	    )
 	@GetMapping("/getEmployees/filter")
 	public List<Employee> getEmployeeByFilter(@RequestParam(required = false) Double minSalary,@RequestParam(required = false) Double maxSalary,
 			@RequestParam(required = false) String dept) {

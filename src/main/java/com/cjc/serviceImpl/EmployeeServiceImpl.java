@@ -25,7 +25,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 		Employee dbEmployee = employeeRepository.save(employee);
 		return dbEmployee;
 	}
-
 	@Override
 	public Employee getByID(int id) {
 		if (employeeRepository.existsById(id)) {
@@ -35,7 +34,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 		return null;
 
 	}
-
 	@Override
 	public List<Employee> getAllEmployees() {
 		List<Employee> list = employeeRepository.findAll();
@@ -50,7 +48,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 		}
 		return "Record is not available for given id:" + id;
 	}
-
 	@Override
 	public Employee updateEmployee(int id, Employee employee) {
 		if (employeeRepository.existsById(id)) {
@@ -63,7 +60,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 		}
 		return null;
 	}
-
 	@Override
 	public Employee editEmployee(int id, Employee employee) {
 		if (employeeRepository.existsById(id)) {
@@ -82,7 +78,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 		}
 		return null;
 	}
-
 	@Override
 	public List<Employee> getEmployeesBypagination(int pageNo, int pageSize) {
 		Pageable page = PageRequest.of(pageNo, pageSize);
@@ -94,7 +89,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 		return Collections.emptyList();
 	}
-
 	@Override
 	// direction=desc or asc
 	public List<Employee> getEmployeeSortedByPrice(String direction) {
@@ -107,7 +101,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 		}
 		return employeeRepository.findAll(sort);
 	}
-
 	@Override
 	public List<Employee> getEmployeesByName(String name) {
 
@@ -117,9 +110,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 		} else {
 			return null;
 		}
-
 	}
-
 	@Override
 	public List<Employee> getEmployeeByFilter(Map<String, String> filters) {
 		String dept = filters.get("dept");
@@ -131,7 +122,5 @@ public class EmployeeServiceImpl implements EmployeeService {
 		} else {
 			return employeeRepository.findByDeptOrSalaryBetween(dept, minSalary, maxSalary);
 		}
-
 	}
-
 }
